@@ -1,0 +1,186 @@
+
+
+.clearfix:before,  .clearfix:after {  
+    content: " ";  
+    display: table;  
+}  
+.clearfix:after {  
+    clear: both;  
+}  
+ 
+.clearfix {  
+    *zoom: 1;  
+}
+
+.logo {
+    width: 15%;
+
+}
+
+.icon {
+    width: 84px; height: 82px;
+}
+
+
+/*    Billboard    */
+.billboard{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-color: #363348
+}
+
+.billboard .shadow{
+    position: absolute;
+    width: 100%;
+    height: 142px;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -1px;
+    background: url('../img/shadow.png') repeat-x;
+}
+
+.billboard .caption{
+    margin-top: 130px;
+    text-align: center;
+    color: #fff;
+}
+
+.billboard .caption h1{
+    font-family: "Verdana", Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    font-weight: bold; 
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.billboard .caption p{
+    font-family: "Verdana", Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+
+.billboard .caption hr{
+    display: inline-block;
+    height: 1px;
+    width: 30px;
+    border: 0!important;   
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+
+/*header*/
+header{
+    width: 100%;
+    height: 125px;
+}
+
+header .logo{
+    float: left;
+    margin-top: 50px;
+    width:10%;
+
+}
+
+header nav{
+    float: right;
+    margin-top: 57px;
+}
+
+
+header nav ul li{
+    list-style: none;
+    display: block;
+    float: left;
+    margin-left: 50px;
+}
+
+header nav ul li a{
+    text-decoration: none;  
+    font-family: "Verdana", Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+
+    transition:all .2s linear;
+    -webkit-transition:all .2s linear;
+    -moz-transition:all .2s linear;
+    -o-transition:all .2s linear;
+}
+
+
+header nav ul li a:hover{
+    color: #B9B9B9;
+}
+
+
+/*Contact Services*/
+.services ul{
+    margin-top: 100px;
+}
+
+.services ul li{
+    list-style: none;
+    float: left;
+    margin-left: 80px;
+    text-align: center;
+}
+
+.services ul li h2{
+    color: #616161;
+    font-family: "Verdana", Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.services ul li p{
+   color: #838181;
+    font-family: "Verdana", Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    line-height: 28px; 
+    margin-top: 40px;
+    letter-spacing: .5px;
+}
+
+.services ul li pre{
+   color: #838181;
+    font-family: "Verdana", Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    line-height: 28px; 
+    margin-top: 40px;
+    letter-spacing: .5px;
+}
+
+
+.social-icons li {
+  display:inline-block;
+  
+  }
+
+.social-icons li img {
+  width:25px;
+  height:25px;
+ margin-left:10%;
+}
+
+/*    footer    */
+
+.end{
+    background-color: #363348
+}
+
+footer{
+    padding: 35px 0;
+    overflow: hidden;
+}
+
+footer .rights p{
+    float: left;
+    color: #838181;
+    font-family: "Verdana", Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    margin: 5px 0 0 40px; 
+}

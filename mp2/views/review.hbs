@@ -1,0 +1,111 @@
+<section class="billboard">
+	<div class="caption">
+		<h1>{{title}}</h1>
+		<p>We value your dining experience.</p>
+		<hr>
+	</div>
+	<div class="shadow"></div>
+</section>
+    
+	
+	<section class="service wrapper">
+		<button class="btn table"><a onclick="document.getElementById('id02').style.display='block'">Write a Review!</a></button>
+<!-- Rating Modal Content -->
+		<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+  
+  <form class="modal-content animate" action="/addRating" method="POST">
+    {{!-- <div class="imgcontainer">
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div> --}}
+
+    <div class="container">
+		<h1>Review Form</h1>
+		<p>Let us know what you think.</p>
+		<hr>
+	
+		<label for="comment"><b>Comment</b></label>
+      <input type="text" placeholder="Your Experience" name="comment" required>
+	  
+	  <label for="stars"><b>Stars</b></label>
+      <input type="text" placeholder="From 1-5 Stars, how was your experience?" name="stars" required>
+
+      <button type="submit">Rate!</button>
+      <label>
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+    <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+	</section>
+
+	
+
+    <br>
+
+		{{!-- Submitted User Comments --}}
+		{{#if reviews}}
+            {{#each reviews}}
+				<div class="comments">
+			{{!-- <a id="modal-start" href="#myModal"><img class="dp" src="./img/user1.png"></a>
+			<span> "The service is really good." </span>
+			<br> --}}
+			<div class="row">
+			
+			{{!-- RESPECTIVE IMG & USER NAME WILL BE PROPERLY IMPLEMENTED WHEN USERS ARE DISTINGUISHED BY SERVER--}}
+			{{!-- <a id="modal-start" href="#myModal"><img class="dp" src="./img/user1.png"></a> --}}
+			<a onclick="document.getElementById('id03').style.display='block'"><img class="dp" src="./img/user1.png"></a>
+
+			
+			<h4 style="display: inline; color:black">"<i>{{this.comment}}</i>"</h4>
+        	<p><b>{{this.stars}}</b> Stars -User</p>
+
+			<br>
+			</div>
+			</div>
+            {{/each}}
+			{{else}}
+			<div class="book wrapper">
+			<h2 style="color:red">No Ratings Yet</h2></div>
+			{{/if}}
+	
+
+		<!--Sample User Profile view through modal-->
+		<div id="id03" class="modal">
+  <span onclick="document.getElementById('id03').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate">
+    <div class="container">
+		<img class="modaldp" src="./img/user1.png">
+			  <h2>{{this.name}}</h2>
+			  <h4>"{{this.bio}}"</h4>
+  </form>
+</div>
+
+
+	</section>
+
+	<!-- Dummy data section for awards -->
+	<section class="bottomReview">
+		<div class="wrapper">
+			<div class="title">
+				<h2>Restaurant Awards</h2>
+			</div>
+
+		    <div class="awards">
+			    {{#each awards}}
+				<img class="images" src="{{this.award}}">
+                {{/each}}
+		    </div>
+		</div>
+	</section> 
+
+<script type="text/javascript" src="js/modal.js"></script>

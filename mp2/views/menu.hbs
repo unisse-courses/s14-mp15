@@ -1,0 +1,15 @@
+<section class="billboard">
+	<div class="caption">
+		<h1>{{title}}</h1>
+		<p>Check out our selection of delicious Indian Cuisine</p>
+		<hr>
+	</div>
+			
+	<div class="shadow"></div>
+</section>
+
+<div id=mainmenu>
+    {{#each food}}
+		<img class="menu" src="{{this.img}}">
+    {{/each}}
+</div>

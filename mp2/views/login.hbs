@@ -1,0 +1,84 @@
+<section class="billboard">
+	<div class="caption">
+		<h1>{{title}}</h1>
+		<p>Dine with us.</p>
+		<hr>
+	</div>
+			
+	<div class="shadow"></div>
+</section>
+
+{{!-- LOGIN/REGISTER --}}
+<section class="book wrapper">
+
+{{!-- LOGIN --}}
+<form action="/loginUser" method="POST">
+  <div class="container">
+    <h1>Login</h1>
+    <p>Welcome!</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="loginbtn">Login</button>
+  </div>
+  
+  <div class="container register">
+    {{!-- <p>Don't have an account? <a href="#">Register</a>.</p> --}}
+	<p>Don't have an account? <a onclick="document.getElementById('id01').style.display='block'">Register</a>.</p>
+  </div>
+</form>
+
+{{!-- REGISTER MODAL --}}
+
+<!-- The Register Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="/addUser" method="POST">
+    {{!-- <div class="imgcontainer">
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div> --}}
+
+    <div class="container">
+		<h1>Register</h1>
+		<p>Make reservations easier by becoming a patron.</p>
+		<hr>
+	
+		<label for="firstName"><b>First Name</b></label>
+      <input type="text" placeholder="Enter First Name" name="firstName" required>
+	  
+	  <label for="lastName"><b>Last Name</b></label>
+      <input type="text" placeholder="Enter Last Name" name="lastName" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="bio"><b>Bio</b></label>
+      <input type="text" placeholder="Enter Bio" name="bio" required>
+
+      <label for="dp"><b>Profile Picture</b></label>
+      <input type="file" placeholder="Select DP" name="dp" required>
+
+      <label>
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="submit">Register</button>
+    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+
+</section>
