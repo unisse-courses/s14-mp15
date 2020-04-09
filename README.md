@@ -51,6 +51,7 @@ Will be visible after logging in.
 Input booking details on the form and submit by clicking "Book Now", will be redirected back to reservation page.
 
     To implement Phase 3: 
+    -Include email of the user who booked
     -alert box on reservation status
     -Calendar will display the status of the time whether available (color green) or not (color red)
 
