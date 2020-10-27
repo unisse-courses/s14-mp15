@@ -5,7 +5,6 @@ const handlebars = require('handlebars');
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
 const mongodb = require('mongodb');
-// const swal = require('sweetalert');
 // const socket = require('socket.io');
 // const session = require('express-session');
 
@@ -86,6 +85,7 @@ mongoClient.connect(databaseURL, options, function(err, client) {
   if (err) throw err;
   const dbo = client.db(dbname);
 
+  //Will create a collection if it has not yet been made
   dbo.createCollection("ratings", function(err, res) {
     if (err) throw err;
     console.log("Ratings Collection created!");
@@ -108,7 +108,7 @@ app.get('/review', function(req, res) {
       res.render('review', {
         title: 'Reviews',
 
-        //To implement in Phase 3: append the respective user name and profile picture from user who submitted rating form
+        //To implement in Phase 3: append the respective user name and profile picture form user who submitted form
         reviews: result, 
         //Dummy data for view user profile
         name: 'John Smith', 
@@ -137,8 +137,8 @@ app.get('/review', function(req, res) {
 
 });
 
-  
-app.post('/addRating', function(req, res) {//user's reviews will be saved in the DB
+  //user's reviews will be saved in the DB
+app.post('/addRating', function(req, res) {
 
   const rating = {
     stars: req.body.stars,
@@ -186,7 +186,8 @@ app.get('/login', function(req,res) {
   });
 });
 
-app.post('/addUser', function(req,res) {//adds new registering user details to DB
+//add new registering user details to DB
+app.post('/addUser', function(req,res) {
   const user = 
   {
   firstName: req.body.firstName,
@@ -217,8 +218,8 @@ app.post('/addUser', function(req,res) {//adds new registering user details to D
     });
 });
 
-
-app.post('/loginUser', function(req,res) { //looks for existing user from DB to verify login user
+//looks for existing user from DB to verify login user
+app.post('/loginUser', function(req,res) {
 
   mongoClient.connect(databaseURL, options, function(err, client) {
     if(err) throw err;
@@ -243,8 +244,8 @@ app.post('/loginUser', function(req,res) { //looks for existing user from DB to 
   });
 });
 
-
-app.post('/addReservation', function(req,res) {//adds new registering user details to DB
+//add new registering user details to DB
+app.post('/addReservation', function(req,res) {
   const reservations = 
   {
     date: req.body.date,
@@ -267,13 +268,11 @@ app.post('/addReservation', function(req,res) {//adds new registering user detai
       });
     
       const result = { success: true, message: "Reservation created!" };
-      // res.send(result);
-      return res.redirect("/reserve");
-      //To implement in Phase 3: Add a Sweetalert for status of reservation (whether successful or fail)
+      res.send(result);
     });
 });
 
-//To implement in Phase 3: Remove Reservation
+//TO ADD: Remove Reservation
 
 //Reservation connection to DB
 mongoClient.connect(databaseURL, options, function(err, client) {
@@ -297,7 +296,8 @@ app.get('/reserve', function(req, res) {
 
 //Logout User
 app.get('/logout', function(req, res){
- res.redirect("/");
+  req.logout();
+  res.redirect('/home');
 });
 
 // Contact Route

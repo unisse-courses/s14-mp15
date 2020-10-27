@@ -1,7 +1,9 @@
 $(document).ready(function() {
     
     var $datePicker = $("div#datepicker");
-    
+
+    //var $datePicker = $("div");
+
     $datePicker.datepicker({
         changeMonth: false,
         changeYear: false,
@@ -74,5 +76,45 @@ $(document).ready(function() {
     document.getElementById('date').setAttribute("min", year + "-" + month[d.getMonth()]+ "-01");
     document.getElementById('date').setAttribute("max", year + "-" + month[d.getMonth()]+ "-30");
     /*Change max day to 30/31 depending on month */
+    
+
+     // POST called
+     $('#addReservation').click(function() {
+        // Get the data from the form
+        var timeslot = $('#timeslot').val();
+  
+        var date = ($('#date').val());
+  
+  
+        var pax = parseInt($('#pax').val());
+        console.log(date,adult,children);
+      var reservation = 
+      {
+      date: date,
+      pax: pax,
+      timeslot: timeslot, 
+  
+      };
+
+        $.post('addReservation', newReservation, function(data, status) {
+           console.log(data);
+      
+          if (data.success) {
+            $('#msg').text(data.message);
+            $('#msg').addClass('success');
+      
+            $('#date').val('');
+            $('#adult').val('');
+            $('#children').val('');
+            $('#timeslot').val('');
+          } else {
+            $('#msg').text(data.message);
+            $('#msg').addClass('fail');
+          }
+        });
+  
+  
+        
+      });
 
 });

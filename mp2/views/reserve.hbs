@@ -7,14 +7,13 @@
 			
 	<div class="shadow"></div>
 </section>
-
 <div id="booking" class="section">
 		<div class="section-center">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-5">
 						<!-- ONLY USED TO DISPLAY AVAILABLE/UNAVAILABLE TIME SLOTS PER DAY -->
-						<!-- To implement in Phase 3: GREEN AND RED INDICATIONS FOR TIMESLOT AVAILABILITY -->
+						<!-- TO ADD: GREEN AND RED INDICATIONS FOR TIMESLOT AVAILABILITY -->
 						<div id="datepicker">
 						</div>
 						Check to see available timeslots
@@ -57,22 +56,15 @@
 									</div>
 								</div>
 								<div class="form-btn">
-									<button onclick="sweetalertclick()" class="submit-btn" type="submit">Book Now</button> 
+									<button class="submit-btn" type="submit" >Book Now</button> 
+									
 								</div>
 							</form>
-
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-{{!-- Logout button --}}
-<div class="container">
-<form method="GET" action="/logout">
-  <input class="w3-button w3-gray" type="submit" value="log out">
-</form>
-</div>
 
 	<script src="js/reserves.js">	</script>

@@ -17,7 +17,6 @@
     "handlebars": "^4.7.3",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.7",
-    "socket.io": "^2.3.0",
-    "sweetalert": "^2.1.2"
+    "socket.io": "^2.3.0"
   }
 }

@@ -37,6 +37,8 @@ $(document).ready(function() {
       var email = $('#email').val();
       var psw = $('#psw').val();
       var bio = $('#bio').val();
+
+      var dp = $('#dp').val();
   
     var user = 
     {
@@ -45,6 +47,7 @@ $(document).ready(function() {
     email: email, 
     psw: psw,
     bio: bio,
+    dp: dp,
     };
 
       $.post('addUser', newUser, function(data, status) {
@@ -59,6 +62,7 @@ $(document).ready(function() {
           $('#email').val('');
           $('#psw').val('');
           $('#bio').val('');
+          $('#dp').val('');
         } else {
           $('#msg').text(data.message);
           $('#msg').addClass('fail');

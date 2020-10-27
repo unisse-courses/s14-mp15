@@ -10,23 +10,26 @@
 * Any text editor for JavaScript, HTML & CSS
 
 ## Local Setup
-1. Navigate to the directory (MAKE SURE FOLDER NAME IS mp2): `cd mp2` 
+1. Navigate to the directory: `cd mp2`
 2. Install the dependencies: `npm install`
-3. Run `mongo.exe` and open `MongoDB Compass`
+3. Run Mongo Shell `mongo.exe` and `MongoDB Compass Community`
 3. Run the server: `node index.js`
     * Navigate to `http://localhost:3000/` in the browser to view the app.
     * Expected screen should be the Home page of Karne Sutra
 
 To stop the server, simply key in `CTRL+C` (Windows) or `control (^) + C` (Mac).
 
+## README.md should provide instructions on how to set it up (so that we can run it). Also provide the dummy credentials for logging in if you already have validations in place. Basically, your README should give us instructions on how to set up, run and access the pages.
+
 ## HOME PAGE
-'Book a Table Now' button is the only way to access login page because that is the only reason for creating an account.
+'Book a Table Now' button and 'Write a Review!' button is the only way to access login page because those are the only reasons for creating an account.
 
 LOG IN PAGE:
 
     REGISTER:
     -Register option will open a registration modal.
-    -Inputted data will be saved in the database - karnesutradb.users
+    -For choosing a Profile Picture, go to public -> img -> then choose any photo that says User
+    -Inputted data will be saved in the database -> karnesutradb.users
 
     LOGIN:
     -Invalid login will redirect back to the Login page.
@@ -36,26 +39,18 @@ LOG IN PAGE:
 Static page. Same for both guests and users.
 
 ## REVIEWS PAGE
-    GUESTS: 
-    -Will only see the reviews from the users stored in the database - karnesutradb.ratings
 
-    USERS:
-    -'Write a Review!' button will open a modal 
-    -Submit a rating and it will be saved in the database - karnesutradb.ratings
-
-    To implement in Phase 3: 
-    -append the respective user name and profile picture from user who submitted rating form
+    -Display reviews submitted
+    -Display awards of the restaurant
+    -'Write a Review!' button will open a modal
+    -If guest, they will be redirected to the login page before submitting (Phase 3)
+    -For now, when submitting a rating, it will be saved in the database -> karnesutradb.rating then it will display on the page
+    * NO PROFILE IMAGE AND USER NAME YET BECAUSE IT IS NOT CONNECTED TO THE USER COLLECTION, NO ACCESS CONTROL (Phase 3)
 
 ## BOOK A TABLE PAGE
-Will be visible after logging in.
-Input booking details on the form and submit by clicking "Book Now", will be redirected back to reservation page.
-
-    To implement Phase 3: 
-    -Include email of the user who booked
-    -alert box on reservation status
-    -Calendar will display the status of the time whether available (color green) or not (color red)
-
-Logout button at the bottom of the page, will redirect to Home page
 
 ## CONTACTS PAGE
 Static page. Same for both guests and users.
+
+#### On dummy data
+All names and data are not real or are not associated with any person. -->

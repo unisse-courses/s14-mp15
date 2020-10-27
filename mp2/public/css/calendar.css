@@ -1,0 +1,21 @@
+#datep {
+     display: none;
+    }
+
+    .ui-datepicker .ui-datepicker-prev, 
+    .ui-datepicker .ui-datepicker-next
+    {
+        display:none;
+    }
+
+    .ui-datepicker-calendar tbody td > a.hover-calendar-cell 
+    {
+        border: 1px solid #074e91;
+        font-weight: normal;
+        color: #1a1a1a;
+    }
+    #addon
+    {
+        background-color:#999; 
+        width:100%;
+    }

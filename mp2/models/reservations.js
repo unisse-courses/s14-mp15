@@ -1,5 +1,3 @@
-import swal from "sweetalert";
-
 $(document).ready(function() {
    
     // POST called
@@ -25,21 +23,18 @@ $(document).ready(function() {
         if (data.success) {
           $('#msg').text(data.message);
           $('#msg').addClass('success');
-
-
+    
           $('#date').val('');
           $('#adult').val('');
           $('#children').val('');
           $('#timeslot').val('');
-
-          
-
         } else {
           $('#msg').text(data.message);
           $('#msg').addClass('fail');
         }
       });
+
+
+      
     });
-
-
   });
