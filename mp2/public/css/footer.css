@@ -4,16 +4,16 @@ footer {
   overflow: hidden;
   background-color: #363348;
 }
-.logo {
+.footer-logo {
   text-align-last: center;
 }
-.tagline {
+.footer-tagline {
   color: white;
   font-family: "Verdana", Geneva, Tahoma, sans-serif;
   padding: 20px 0px;
 }
 
-footer .rights p {
+footer .footer-rights p {
   /* float: left; */
   text-align-last: center;
   color: #838181;
