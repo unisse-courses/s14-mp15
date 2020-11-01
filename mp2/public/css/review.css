@@ -162,6 +162,7 @@ p {
   text-align: center;
   text-decoration: none;
 }
+
 .review-btn {
   border: none;
   background-color: #484461;
@@ -177,7 +178,13 @@ p {
 }
 .review-content {
   padding-top: 100px;
-  overflow: hidden;
+  overflow: scroll;
+  height: 600px;
+  overflow-x: hidden;
+}
+
+.review-content::-webkit-scrollbar {
+  display: none;
 }
 /*    header    */
 /* header {
