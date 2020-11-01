@@ -65,7 +65,7 @@ h6 {
 }
 
 /*    Billboard    */
-.billboard {
+.menu-billboard {
   width: 100%;
   height: 400px;
   position: relative;
@@ -76,7 +76,7 @@ h6 {
   );
 }
 
-.billboard .shadow {
+/* .menu-billboard .shadow {
   position: absolute;
   width: 100%;
   height: 142px;
@@ -84,15 +84,15 @@ h6 {
   left: 0;
   margin-bottom: -1px;
   background: url("../img/shadow.png") repeat-x;
-}
+} */
 
-.billboard .caption {
-  margin-top: 130px;
+.menu-billboard .menu-caption {
+  /* margin-top: 130px; */
   text-align: center;
   color: #fff;
 }
 
-.billboard .caption h1 {
+.menu-billboard .menu-caption h1 {
   font-family: "Verdana", Geneva, Tahoma, sans-serif;
   font-size: 50px;
   font-weight: bold;
@@ -100,14 +100,14 @@ h6 {
   color: #fff;
 }
 
-.billboard .caption p {
+.menu-billboard .menu-caption p {
   font-family: "Verdana", Geneva, Tahoma, sans-serif;
   font-size: 18px;
   margin-bottom: 30px;
   color: #fff;
 }
 
-.billboard .caption hr {
+.menu-billboard .menu-caption hr {
   display: inline-block;
   height: 1px;
   width: 30px;
@@ -158,7 +158,7 @@ header nav ul li a:hover {
   color: #b9b9b9;
 } */
 
-.title {
+/* .title {
   text-align: center;
   overflow: hidden;
 }
@@ -188,13 +188,15 @@ header nav ul li a:hover {
   margin: 0 auto;
   padding: 0;
   border: 0 !important;
-}
+} */
 
 /*main menu*/
 
 #mainmenu {
   background-color: #fff;
   display: flex;
+  padding: 100px 0px;
+  padding-bottom: 200px;
 }
 
 .menu {
