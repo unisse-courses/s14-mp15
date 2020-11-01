@@ -99,7 +99,7 @@ app.get('/review', function(req, res) {
     if(err) throw err;
     const dbo = client.db(dbname);
 
-    dbo.collection("ratings").find({}).toArray(function(err, result) {
+    dbo.collection("ratings").find({}).sort({_id:-1}).toArray(function(err, result) {
       if(err) throw err;
       
       console.log("Read Successful!");
