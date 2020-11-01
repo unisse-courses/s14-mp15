@@ -1,14 +1,14 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
-<section class="billboardHome">
-	<div class="caption">
+<section class="home-billboard">
+	<div class="home-caption">
 		<h1>{{title}}</h1>
 		<p>Enjoy a unique take on Indian Cuisine</p>
 		<hr>
 	</div>
 	{{!-- <div class="shadow"></div> --}}
-	<div class="service wrapper">
-		<button class="btn table">
+	<div class="home-service home-wrapper">
+		<button class="home-btn home-table">
 			<a href="login">Book a Table Now!</a>
 			{{!-- <a href="reserve">Book a Table Now!</a> --}}
 		</button>
@@ -16,7 +16,7 @@
 </section>
 
 {{!-- About Section --}}
-<section class="services wrapper" style="padding-bottom: 50px;">
+<section class="home-services home-wrapper" style="padding-bottom: 50px;">
 	{{!-- <ul class="clearfix">
 		{{#each about}}
 		<li>
@@ -28,14 +28,14 @@
 		{{/each}}
 	</ul> --}}
 
-	<div class="container description">
+	<div class="container home-description">
 		<div class="row">
 			{{#each about}}
 			<div class="col">
-				<img class="image" src="{{this.img}}" />
+				<img class="home-image" src="{{this.img}}" />
 				<span class="separator"></span>
-				<h2 class="about-section-text">{{this.title1}}</h2>
-				<p class="about-section-text">{{this.description}}</p>
+				<h2 class="home-about-section-text">{{this.title1}}</h2>
+				<p class="home-about-section-text">{{this.description}}</p>
 			</div>
 			{{/each}}
 		</div>
