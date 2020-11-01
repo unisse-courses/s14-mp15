@@ -7,25 +7,26 @@ body {
     margin: 0 auto;
 } */
 
-.images {
-  width: 20%;
-  height: 30%;
-  margin: 3px;
+.review-images {
+  width: 100%;
+  /* height: 30%; */
+  /* margin: 3px; */
   margin-top: 2em;
 }
 
-.awards {
+.review-awards {
   display: flex;
 }
 
 .review-comments {
+  padding-bottom: 20px;
 }
 .review-user-image {
   text-align: right;
 }
 .review-user-comment {
   text-align: left;
-  padding: 0px;
+  padding: 20px 0px;
   overflow-wrap: initial;
 }
 
@@ -94,7 +95,7 @@ p {
 }
 
 .review-dp {
-  width: 50%;
+  width: 30%;
   vertical-align: middle;
   margin-bottom: 20px;
   padding-left: 50px;
@@ -175,8 +176,7 @@ p {
   border-radius: 15px;
 }
 .review-content {
-  padding: 100px 0px;
-  padding-bottom: 200px;
+  padding-top: 100px;
   overflow: hidden;
 }
 /*    header    */
@@ -255,12 +255,12 @@ header.light nav ul li a:hover {
   letter-spacing: 0.5px;
 }
 
-.title {
+.review-title {
   text-align: center;
   overflow: hidden;
 }
 
-.title h2 {
+.review-title h2 {
   color: #616161;
   font-family: "Verdana", Geneva, Tahoma, sans-serif;
   font-size: 30px;
@@ -269,7 +269,7 @@ header.light nav ul li a:hover {
   text-transform: uppercase;
 }
 
-.title h3 {
+.review-title h3 {
   color: #9b9b9b;
   font-family: "Verdana", Geneva, Tahoma, sans-serif;
   font-size: 14px;
@@ -277,7 +277,7 @@ header.light nav ul li a:hover {
   font-weight: normal !important;
 }
 
-.title hr.separator {
+.review-title hr.separator {
   display: block;
   width: 40px;
   height: 1px;
@@ -287,8 +287,8 @@ header.light nav ul li a:hover {
   border: 0 !important;
 }
 
-.bottomReview {
-  margin-top: 100px;
+.review-bottomReview {
+  /* margin-top: 100px; */
   padding: 100px 0;
   background: #fafafa;
 }
@@ -334,11 +334,15 @@ header.light nav ul li a:hover {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.close {
+.review-close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  position: absolute;
+  right: 17px;
+  top: 10px;
+  cursor: pointer;
 }
 
 .close:hover,
@@ -348,6 +352,9 @@ header.light nav ul li a:hover {
   cursor: pointer;
 }
 
+.review-modal-content {
+  overflow: hidden;
+}
 /*    footer    */
 /* footer {
   padding: 35px 0;
