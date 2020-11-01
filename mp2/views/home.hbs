@@ -1,42 +1,43 @@
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
 <section class="billboardHome">
-
-<div class="caption">
-			<h1>{{title}}</h1>
-			<p>Enjoy a unique take on Indian Cuisine</p>
-			<hr>
-</div>
-
-<div class="shadow"></div>
-
-<div class="service wrapper">
-
-
-	<button class="btn table">
-		<a href="login">Book a Table Now!</a>
-		{{!-- <a href="reserve">Book a Table Now!</a> --}}
-	</button>
-
-</div>
-
+	<div class="caption">
+		<h1>{{title}}</h1>
+		<p>Enjoy a unique take on Indian Cuisine</p>
+		<hr>
+	</div>
+	{{!-- <div class="shadow"></div> --}}
+	<div class="service wrapper">
+		<button class="btn table">
+			<a href="login">Book a Table Now!</a>
+			{{!-- <a href="reserve">Book a Table Now!</a> --}}
+		</button>
+	</div>
 </section>
 
 {{!-- About Section --}}
 <section class="services wrapper">
-		<ul class="clearfix">
-      {{#each about}}
-			<li>
-				<img src="{{this.img}}"/>
+	{{!-- <ul class="clearfix">
+		{{#each about}}
+		<li>
+			<img class="image" src="{{this.img}}" />
+			<span class="separator"></span>
+			<h2>{{this.title1}}</h2>
+			<p>{{this.description}}</p>
+		</li>
+		{{/each}}
+	</ul> --}}
+
+	<div class="container description">
+		<div class="row">
+			{{#each about}}
+			<div class="col">
+				<img class="image" src="{{this.img}}" />
 				<span class="separator"></span>
-				<h2>{{this.title1}}</h2>
-				<p>{{this.description}}</p>
-			</li>
-      {{/each}}
-		</ul>
-	</section>
-
-	<section class="bottom">
-		<img class="logo" src="{{logo}}" class="bottom_logo"/>
-		<h3>Let us bring you the ultimate form of pleasure</h3>
-	</section>
-
-
+				<h2 class="about-section-text">{{this.title1}}</h2>
+				<p class="about-section-text">{{this.description}}</p>
+			</div>
+			{{/each}}
+		</div>
+	</div>
+</section>
