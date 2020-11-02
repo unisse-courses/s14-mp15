@@ -1,70 +1,72 @@
-<section class="billboard">
-	<div class="caption">
+<link rel="stylesheet" type="text/css" href="css/reserve.css">
+
+<section class="reserve-billboard">
+	<div class="reserve-caption">
 		<h1>{{title}}</h1>
 		<p>Karne Sutra offers a very unique experience so reservations are only available within the month.</p>
 		<hr>
 	</div>
-			
-	<div class="shadow"></div>
+
+	{{!-- <div class="shadow"></div> --}}
 </section>
-<div id="booking" class="section">
-		<div class="section-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-5">
-						<!-- ONLY USED TO DISPLAY AVAILABLE/UNAVAILABLE TIME SLOTS PER DAY -->
-						<!-- TO ADD: GREEN AND RED INDICATIONS FOR TIMESLOT AVAILABILITY -->
-						<div id="datepicker">
-						</div>
-						Check to see available timeslots
+<div id="booking" class="reserve-section">
+	<div class="section-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<!-- ONLY USED TO DISPLAY AVAILABLE/UNAVAILABLE TIME SLOTS PER DAY -->
+					<!-- TO ADD: GREEN AND RED INDICATIONS FOR TIMESLOT AVAILABILITY -->
+					<div id="datepicker">
 					</div>
-					<div class="col-md-6 col-md-offset-1">
-						<div class="booking-form">
-							<form action="/addReservation" method="POST" id="resForm">
-								<div class="row">
-									<div class="col-md-3 col-sm-6">
-										<div class="form-group">
-											<span class="form-label">PAX</span>
-											<input type="number" id="pax" name="pax" min="1" max="10" class="form-control">
-											<span class="select-arrow"></span>
-										</div>
+					Check to see available timeslots
+				</div>
+				<div class="col-md-6 col-md-offset-1">
+					<div class="booking-form">
+						<form action="/addReservation" method="POST" id="resForm">
+							<div class="row">
+								<div class="col-md-3 col-sm-6">
+									<div class="form-group">
+										<span class="form-label">PAX</span>
+										<input type="number" id="pax" name="pax" min="1" max="10" class="form-control">
+										<span class="select-arrow"></span>
 									</div>
-									
 								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<input class="form-control" name="date" type="date" id="date" required>
-											<span class="form-label">dd/</span>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<span class="form-label">Time</span>
-											<select class="form-control" name="timeslot">
 
-												<option>10:00 am - 11:00 am</option>
-												<option>11:00 am - 12:00 pm</option>
-												<option>12:00 pm - 1:00 pm</option>
-												<option>6:00 pm - 7:00 pm</option>
-												<option>7:00 pm - 8:00 pm</option>
-												<option>9:00 pm - 10:00 pm</option>
-
-											</select>
-											<span class="select-arrow"></span>
-										</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" name="date" type="date" id="date" required>
+										<span class="form-label">dd/</span>
 									</div>
 								</div>
-								<div class="form-btn">
-									<button class="submit-btn" type="submit" >Book Now</button> 
-									
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Time</span>
+										<select class="form-control" name="timeslot">
+
+											<option>10:00 am - 11:00 am</option>
+											<option>11:00 am - 12:00 pm</option>
+											<option>12:00 pm - 1:00 pm</option>
+											<option>6:00 pm - 7:00 pm</option>
+											<option>7:00 pm - 8:00 pm</option>
+											<option>9:00 pm - 10:00 pm</option>
+
+										</select>
+										<span class="select-arrow"></span>
+									</div>
 								</div>
-							</form>
-						</div>
+							</div>
+							<div class="form-btn">
+								<button class="submit-btn" type="submit">Book Now</button>
+
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
-	<script src="js/reserves.js">	</script>
+<script src="js/reserves.js">	</script>
