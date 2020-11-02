@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="css/login.css">
+
 <section class="login-billboard">
   <div class="login-caption">
     <h1>{{title}}</h1>
@@ -10,29 +11,39 @@
 </section>
 
 {{!-- LOGIN/REGISTER --}}
-<section class="book wrapper">
-
+<section class="login-wrapper">
   {{!-- LOGIN --}}
-  <form action="/loginUser" method="POST">
-    <div class="container">
-      <h1>Login</h1>
-      <p>Welcome!</p>
-      <hr>
+  <div class="card">
+    <div class="card-body">
+      <form action="/loginUser" method="POST">
+        <div class="container">
+          <div style="text-align-last: center;">
+            <h1 class="card-title">Login</h1>
+            <p class="card-subtitle mb-2 text-muted">Welcome!</p>
+          </div>
+          <hr>
 
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
+          <label for="email"><b>Email</b></label>
+          <input type="email" class="form-control" placeholder="Enter Email" name="email" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
 
-      <button type="submit" class="loginbtn">Login</button>
+          <div style="text-align-last: center;">
+            <button type="submit" class="login-btn btn btn-success">Login</button>
+          </div>
+        </div>
+
+        <div class="container login-register">
+          {{!-- <p>Don't have an account? <a href="#">Register</a>.</p> --}}
+          <p style="margin-bottom: 5px;">Don't have an account? <a
+              onclick="document.getElementById('id01').style.display='block'" class="login-register-text">
+              <p>Register Here</p>
+            </a></p>
+        </div>
+      </form>
     </div>
-
-    <div class="container register">
-      {{!-- <p>Don't have an account? <a href="#">Register</a>.</p> --}}
-      <p>Don't have an account? <a onclick="document.getElementById('id01').style.display='block'">Register</a>.</p>
-    </div>
-  </form>
+  </div>
 
   {{!-- REGISTER MODAL --}}
 

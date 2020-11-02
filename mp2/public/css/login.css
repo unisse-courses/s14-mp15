@@ -59,6 +59,10 @@ body {
   box-sizing: border-box;
 }
 
+.login-wrapper {
+  padding: 100px 300px;
+}
+
 /* Add padding to containers */
 .container {
   padding: 16px;
@@ -66,7 +70,7 @@ body {
 }
 
 /* Full-width input fields */
-input[type="text"],
+input[type="email"],
 input[type="password"] {
   width: 100%;
   padding: 15px;
@@ -101,14 +105,15 @@ hr {
 }
 
 /* Set a style for the submit button */
-.loginbtn {
+.login-btn {
   background-color: #4caf50;
   color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
+  /* padding: 16px 20px; */
+  /* margin: 8px 0; */
+  padding: 10px 0px;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 50%;
   opacity: 0.9;
 }
 
@@ -135,9 +140,18 @@ a {
 }
 
 /* Set a grey background color and center the text of the "sign in" section */
-.register {
-  background-color: #f1f1f1;
+.login-register {
+  /* background-color: #f1f1f1; */
   text-align: center;
+}
+.login-register-text {
+  color: goldenrod;
+  font-weight: bold;
+}
+.login-register-text:hover {
+  color: goldenrod;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /* REGISTER MODAL */
