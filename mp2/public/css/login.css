@@ -64,9 +64,10 @@ body {
 }
 
 /* Add padding to containers */
-.container {
+.login-container {
   padding: 16px;
   background-color: white;
+  border-radius: 5px;
 }
 
 /* Full-width input fields */

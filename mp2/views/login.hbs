@@ -16,7 +16,7 @@
   <div class="card">
     <div class="card-body">
       <form action="/loginUser" method="POST">
-        <div class="container">
+        <div class="login-container">
           <div style="text-align-last: center;">
             <h1 class="card-title">Login</h1>
             <p class="card-subtitle mb-2 text-muted">Welcome!</p>
@@ -34,7 +34,7 @@
           </div>
         </div>
 
-        <div class="container login-register">
+        <div class="login-container login-register">
           {{!-- <p>Don't have an account? <a href="#">Register</a>.</p> --}}
           <p style="margin-bottom: 5px;">Don't have an account? <a
               onclick="document.getElementById('id01').style.display='block'" class="login-register-text">
@@ -55,15 +55,17 @@
       <img src="img_avatar2.png" alt="Avatar" class="avatar">
     </div> --}}
 
-      <div class="container">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close"
-          title="Close Modal">&times;</span>
+      <div class="login-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"
+          style=" position: absolute; right: 20px; top: 10px;">
+          &times;
+        </span>
         <h1>Register</h1>
         <p>Make reservations easier by becoming a patron.</p>
         <hr>
 
-        <div class="row">
-          <div class="col">
+        <div class=" row" style="margin-bottom: 22px;">
+          <div class=" col">
             <label for="firstName"><b>First Name</b></label>
             <input type="text" class="form-control" placeholder="Enter First Name" name="firstName" required>
           </div>
@@ -87,14 +89,14 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" style="margin-bottom: 22px;">
           <div class="col">
             <label for="bio"><b>Bio</b></label>
             <textarea class="form-control" placeholder="Enter Bio" name="bio" rows="3" required> </textarea>
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" style="margin-bottom: 22px;">
           <div class="col">
             <label for="dp"><b>Profile Picture</b></label>
             <input type="file" class="form-control-file" placeholder="Select DP" name="dp" required>
@@ -102,13 +104,13 @@
         </div>
       </div>
 
-      <div class="container" style="background-color:#f1f1f1">
-        <button type="submit">Register</button>
-        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+      <div class="login-container" style="background-color:#f1f1f1; text-align-last: end;">
+        <button type="button" class="btn btn-secondary" style="width: 20%; 
+    text-align-last: center;" onclick="document.getElementById('id01').style.display='none'"
           class="cancelbtn">Cancel</button>
+        <button type="submit" class="btn btn-success" style="width: 20%; 
+    text-align-last: center;">Register</button>
       </div>
     </form>
   </div>
-
-
 </section>
