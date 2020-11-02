@@ -46,3 +46,15 @@
   padding: 100px 0px;
   padding-bottom: 200px;
 }
+
+.reserve-title {
+  text-align: center;
+  overflow: hidden;
+  color: #616161;
+  font-family: "Verdana", Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+}
+.reserve-title-text {
+  font-size: 20px;
+  font-weight: bold;
+}

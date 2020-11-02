@@ -12,7 +12,7 @@
 <div id="booking" class="reserve-section">
 	<div class="section-center">
 		<div class="container">
-			<div class="row">
+			<div class="row" style="align-items: center;">
 				<div class="col-md-5">
 					<!-- ONLY USED TO DISPLAY AVAILABLE/UNAVAILABLE TIME SLOTS PER DAY -->
 					<!-- TO ADD: GREEN AND RED INDICATIONS FOR TIMESLOT AVAILABILITY -->
@@ -20,13 +20,18 @@
 					</div>
 					Check to see available timeslots
 				</div>
-				<div class="col-md-6 col-md-offset-1">
-					<div class="booking-form">
+				<div class="card col-md-6 col-md-offset-1">
+					<div class="card-body booking-form">
 						<form action="/addReservation" method="POST" id="resForm">
+
+							<div class="reserve-title" style="padding: 20px 0px;">
+								<h2 class="reserve-title-text">Book Now</h2>
+							</div>
+
 							<div class="row">
 								<div class="col-md-3 col-sm-6">
 									<div class="form-group">
-										<span class="form-label">PAX</span>
+										<span class="form-label">PAX: </span>
 										<input type="number" id="pax" name="pax" min="1" max="10" class="form-control">
 										<span class="select-arrow"></span>
 									</div>
@@ -36,10 +41,12 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
+										<span class="form-label">Date: </span>
 										<input class="form-control" name="date" type="date" id="date" required>
-										<span class="form-label">dd/</span>
 									</div>
 								</div>
+							</div>
+							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
 										<span class="form-label">Time</span>
@@ -57,9 +64,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="form-btn">
-								<button class="submit-btn" type="submit">Book Now</button>
-
+							<div class="card-footer form-btn" style="text-align-last: end;">
+								<button class=" btn btn-success" type="submit">Book Now</button>
 							</div>
 						</form>
 					</div>
