@@ -68,8 +68,18 @@ $(document).ready(function() {
           $('#msg').addClass('fail');
         }
       });
+    });
 
-
+    $(function() {   
+      $("btn-success").on("click",function(){  
+         $( "#dialog" ).dialog({
+            width : 710,
+            height : 410,
+            modal: true,
+            resizable: false,    
+            draggable: false,   
+         });  
+      })
     });
   
     //loginUser POST call

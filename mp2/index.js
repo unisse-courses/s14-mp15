@@ -214,7 +214,7 @@ app.post('/addUser', function(req,res) {
     
       const result = { success: true, message: "User created!" };
       // res.send(result);
-      return res.redirect('/login');
+        return res.redirect('/login'); 
     });
 });
 
@@ -248,8 +248,8 @@ app.post('/loginUser', function(req,res) {
 app.post('/addReservation', function(req,res) {
   const reservations = 
   {
-    date: req.body.date,
     pax: req.body.pax,
+    date: req.body.date,
     timeslot: req.body.timeslot,
     
   };
@@ -268,7 +268,8 @@ app.post('/addReservation', function(req,res) {
       });
     
       const result = { success: true, message: "Reservation created!" };
-      res.send(result);
+      // res.send(result);
+      return res.redirect('/reserve'); 
     });
 });
 

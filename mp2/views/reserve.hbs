@@ -15,6 +15,9 @@
 			<div class="row">
 				<div class="card col-3" style="margin-right: 20px;">
 					<div class="card-body">
+						<div>
+							<button class=" btn btn-danger" type="logout">Logout</button>
+						</div>
 						<div class="text-center reserve-userProfile-image">
 							<img src="img\user1.png" class="rounded" alt="..." width="50%">
 						</div>
@@ -42,7 +45,7 @@
 									<div id="datepicker">
 									</div>
 									<p style="font-size:12px;">
-										Check to see available timeslots
+										For your reference.
 									</p>
 									{{!-- </div> --}}
 								</div>
@@ -82,23 +85,14 @@
 										<div class="row">
 											{{!-- <div class="col-md-6"> --}}
 											<div class="form-group">
-												<span class="form-label">Time</span>
-												<select class="form-control" name="timeslot">
-
-													<option>10:00 am - 11:00 am</option>
-													<option>11:00 am - 12:00 pm</option>
-													<option>12:00 pm - 1:00 pm</option>
-													<option>6:00 pm - 7:00 pm</option>
-													<option>7:00 pm - 8:00 pm</option>
-													<option>9:00 pm - 10:00 pm</option>
-
-												</select>
-												<span class="select-arrow"></span>
+												<span class="form-label">Time: </span> <br>
+												<input type="time" id="timeslot" name="timeslot">
 											</div>
 											{{!-- </div> --}}
 										</div>
 										<div class="form-btn" style="text-align-last: end;">
-											<button class=" btn btn-success" type="submit">Book Now</button>
+											<button type="submit" onclick="done()" class=" btn btn-success">
+												Book Now</button>
 										</div>
 									</form>
 								</div>
@@ -111,4 +105,8 @@
 		</div>
 	</div>
 
-	<script src="js/reserves.js">	</script>
+	<script>	
+	function done() {
+    alert("Thank you for submitting your reservation details. Please wait for a confirmation text for the status of your reservation.");
+  	}
+	</script>

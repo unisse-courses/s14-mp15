@@ -12,30 +12,30 @@ $(document).ready(function() {
         stepMonths: 0,
         yearRange: new Date().getFullYear().toString() + ':' + new Date().getFullYear().toString(),
         altField: "#datep",
-    }).change(function(e){
-        setTimeout(function(){   
-            $datePicker
-                .find('.ui-datepicker-current-day')
-                .parent()
-                .after('<tr>\n\
-                            <td colspan="8">\n\
-                                <div> \n\
-                                    <button>10:00 am – 11:00 am </button>\n\
-                                </div>\n\
-                                    <button>11:00 am – 12:00 pm</button>\n\
-                                </div>\n\
-                                <button>12:00 pm – 1:00 pm</button>\n\
-                                </div>\n\
-                                <button>6:00 pm – 7:00 pm </button>\n\
-                                </div>\n\
-                                    <button>7:00 pm – 8:00 pm</button>\n\
-                                </div>\n\
-                                <button>9:00 pm – 10:00 pm</button>\n\
-                                </div>\n\
-                            </td>\n\
-                    </tr>');
+    }).change(function(e){ //Show red or green
+        // setTimeout(function(){   
+        //     $datePicker
+        //         .find('.ui-datepicker-current-day')
+        //         .parent()
+        //         .after('<tr>\n\
+        //                     <td colspan="8">\n\
+        //                         <div> \n\
+        //                             <button>10:00 am – 11:00 am </button>\n\
+        //                         </div>\n\
+        //                             <button>11:00 am – 12:00 pm</button>\n\
+        //                         </div>\n\
+        //                         <button>12:00 pm – 1:00 pm</button>\n\
+        //                         </div>\n\
+        //                         <button>6:00 pm – 7:00 pm </button>\n\
+        //                         </div>\n\
+        //                             <button>7:00 pm – 8:00 pm</button>\n\
+        //                         </div>\n\
+        //                         <button>9:00 pm – 10:00 pm</button>\n\
+        //                         </div>\n\
+        //                     </td>\n\
+        //             </tr>');
 
-        });
+        // });
     });
 
 
@@ -81,17 +81,18 @@ $(document).ready(function() {
      // POST called
      $('#addReservation').click(function() {
         // Get the data from the form
-        var timeslot = $('#timeslot').val();
-  
-        var date = ($('#date').val());
-  
-  
         var pax = parseInt($('#pax').val());
-        console.log(date,adult,children);
+
+        var date = ($('#date').val());
+
+        var timeslot = $('#timeslot').val();
+
+        console.log(pax, date, timeslot);
+
       var reservation = 
       {
-      date: date,
       pax: pax,
+      date: date,
       timeslot: timeslot, 
   
       };
@@ -103,18 +104,14 @@ $(document).ready(function() {
             $('#msg').text(data.message);
             $('#msg').addClass('success');
       
+            $('#pax').val('');
             $('#date').val('');
-            $('#adult').val('');
-            $('#children').val('');
             $('#timeslot').val('');
           } else {
             $('#msg').text(data.message);
             $('#msg').addClass('fail');
           }
-        });
-  
-  
-        
+        });        
       });
 
 });

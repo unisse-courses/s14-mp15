@@ -3,16 +3,17 @@ $(document).ready(function() {
     // POST called
     $('#addReservation').click(function() {
       // Get the data from the form
-      var timeslot = $('#timeslot').val();
+      var pax = parseInt($('#pax').val());
 
       var date = ($('#date').val());
 
-      var pax = parseInt($('#pax').val());
-      console.log(date,adult,children);
+      var timeslot = $('#timeslot').val();
+
+      console.log(pax, date, timeslot);
     var reservation = 
     {
-      date: date,
       pax: pax,
+      date: date,
       timeslot: timeslot, 
 
     };
@@ -20,13 +21,12 @@ $(document).ready(function() {
       $.post('addReservation', newReservation, function(data, status) {
          console.log(data);
     
-        if (data.success) {
+         if (data.success) {
           $('#msg').text(data.message);
           $('#msg').addClass('success');
     
+          $('#pax').val('');
           $('#date').val('');
-          $('#adult').val('');
-          $('#children').val('');
           $('#timeslot').val('');
         } else {
           $('#msg').text(data.message);
