@@ -44,7 +44,6 @@
 
 .reserve-section {
   padding: 100px 0px;
-  padding-bottom: 200px;
 }
 
 .reserve-title {
@@ -57,4 +56,16 @@
 .reserve-title-text {
   font-size: 20px;
   font-weight: bold;
+}
+.reserve-verticalLine {
+  border-left: 1px solid rgba(0, 0, 0, 0.125);
+  height: 100%;
+}
+
+.reserve-userProfile-margin {
+  margin-bottom: 0px;
+}
+
+.reserve-userProfile-image {
+  padding: 30px 0px;
 }
