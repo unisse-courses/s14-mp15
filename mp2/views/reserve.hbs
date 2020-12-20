@@ -29,7 +29,7 @@
 							<p>ADD FROM DB</p>
 
 							<p class="reserve-userProfile-margin">Contact Information: </p>
-							<p>ADD FROM DB</p>
+							<p>ADD FROM DB (Phase 3)</p>
 						</div>
 					</div>
 				</div>
@@ -40,8 +40,6 @@
 							<div class="col-5" style="align-self: center;">
 								<div class="row">
 									{{!-- <div class="col-md-5"> --}}
-									<!-- ONLY USED TO DISPLAY AVAILABLE/UNAVAILABLE TIME SLOTS PER DAY -->
-									<!-- TO ADD: GREEN AND RED INDICATIONS FOR TIMESLOT AVAILABILITY -->
 									<div id="datepicker">
 									</div>
 									<p style="font-size:12px;">
@@ -59,7 +57,8 @@
 							<div class="col-6">
 								{{!-- <div class="col-md-6 col-md-offset-1"> --}}
 								<div class="booking-form">
-									<form action="/addReservation" method="POST" id="resForm">
+									<form action="/addReservation" method="POST" id="resForm" 
+									onsubmit="alert('Thank you for submitting reservation details. Please wait for the restaurant to confirm your reservation.');">
 										<div class="reserve-title" style="padding: 20px 0px;">
 											<h2 class="reserve-title-text">Book Now</h2>
 										</div>
@@ -91,8 +90,9 @@
 											{{!-- </div> --}}
 										</div>
 										<div class="form-btn" style="text-align-last: end;">
-											<button type="submit" onclick="done()" class=" btn btn-success">
-												Book Now</button>
+											<button type="submit" class=" btn btn-success">
+												Book Now
+											</button>
 										</div>
 									</form>
 								</div>
@@ -104,9 +104,3 @@
 			</div>
 		</div>
 	</div>
-
-	<script>	
-	function done() {
-    alert("Thank you for submitting your reservation details. Please wait for a confirmation text for the status of your reservation.");
-  	}
-	</script>

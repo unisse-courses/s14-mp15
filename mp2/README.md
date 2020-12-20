@@ -45,9 +45,13 @@ Static page. Same for both guests and users.
     -'Write a Review!' button will open a modal
     -If guest, they will be redirected to the login page before submitting (Phase 3)
     -For now, when submitting a rating, it will be saved in the database -> karnesutradb.rating then it will display on the page
-    * NO PROFILE IMAGE AND USER NAME YET BECAUSE IT IS NOT CONNECTED TO THE USER COLLECTION, NO ACCESS CONTROL (Phase 3)
+    * NO ACTUAL PROFILE IMAGE AND USER NAME YET BECAUSE IT IS NOT CONNECTED TO THE USER COLLECTION, NO ACCESS CONTROL (Phase 3)
 
 ## BOOK A TABLE PAGE
+    -Calendar is for reference of user
+    -Reservation form will ask for pax (maximum of 10), date of reservation, and time.
+    * 'Log Out' button to be implemented properly in Phase 3 (sessions)
+    * PROFILE IMAGE AND DETAILS OF ACCOUNT LOGGED IN WILL BE DISPLAYED (Phase 3)
 
 ## CONTACTS PAGE
 Static page. Same for both guests and users.
