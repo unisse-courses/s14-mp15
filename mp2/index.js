@@ -5,6 +5,7 @@ const handlebars = require('handlebars');
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
 const mongodb = require('mongodb');
+
 // const socket = require('socket.io');
 // const session = require('express-session');
 
@@ -216,6 +217,30 @@ app.post('/addUser', function(req,res) {
       // res.send(result);
       return res.redirect('/login');
     });
+});
+
+//looks for existing reservations from DB on current date
+app.post('/checkReservations', function(req,res) {
+  mongoClient.connect(databaseURL, options, function(err, reservation){
+    if(err) throw err;
+    const date = req.body.date;      
+    const timeslot = req.body.timeslot;       
+
+    dbo.collection("reservations").findOne({date: date, timeslot: timeslot}, function(err, reservation){
+      try{
+        if(!reservation) {   // Should change nothing
+          console.log("Hindi pa kasama sa database"); 
+          return res.redirect('/reserve')
+        } else {      // Tell user that the slot isn't available
+          console.log("May reservation na sa timeslot");
+          return res.redirect('/reserve') }
+        } catch {
+          console.log(err);
+          return res.status(500).send();
+        }
+        client.close();
+    });
+  });
 });
 
 //looks for existing user from DB to verify login user
